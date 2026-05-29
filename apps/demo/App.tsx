@@ -4,10 +4,8 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import { hello } from '@riyan/routesmith';
 
 function App() {
-  hello();
   const isDarkMode = useColorScheme() === 'dark';
 
   return (

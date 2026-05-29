@@ -1,2 +1,2 @@
-export * from "./generator/scanScreens";
-export * from "./generator/generateRoutes";
+// export * from "./runtime";
+export * from "./types";
