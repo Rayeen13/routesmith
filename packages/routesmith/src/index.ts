@@ -1,3 +1,2 @@
-export const hello = () => {
-  console.log('Routesmith initialized');
-};
+export * from "./generator/scanScreens";
+export * from "./generator/generateRoutes";

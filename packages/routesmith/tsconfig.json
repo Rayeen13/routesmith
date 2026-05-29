@@ -10,7 +10,10 @@
 
     "strict": true,
 
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    "moduleResolution": "bundler",
+    "types": ["node"]
   },
   "include": ["src"]
 }
