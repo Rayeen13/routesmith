@@ -1,4 +1,3 @@
-
 export const Routes = {
   AboutScreen: 'AboutScreen',
   HomeScreen: 'HomeScreen',
