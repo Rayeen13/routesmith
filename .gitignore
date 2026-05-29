@@ -1,0 +1,26 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+build
+
+# React Native Android
+android/.gradle
+android/app/build
+
+# React Native iOS
+ios/build
+ios/Pods
+
+# Metro
+.metro-health-check*
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
