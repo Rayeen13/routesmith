@@ -14,7 +14,7 @@ export async function generate() {
 
   const screens = scanScreens(screensPath);
 
-  const output = generateRoutes(screens);
+  const output = generateRoutes(screens, config);
 
   fs.writeFileSync(outputPath, output);
 

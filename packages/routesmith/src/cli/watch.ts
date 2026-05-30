@@ -4,7 +4,7 @@ import chokidar from "chokidar";
 import { loadConfig } from "./loadConfig";
 import { generate } from "./generate";
 
-async function watch() {
+export async function watch() {
   const config = await loadConfig();
 
   const screensPath = path.resolve(process.cwd(), config.screensDir);
@@ -41,5 +41,3 @@ async function watch() {
     }, 300);
   });
 }
-
-watch();
