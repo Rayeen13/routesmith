@@ -13,13 +13,34 @@ const getRouteName = (screenName: string, removeSuffix?: string) => {
   return screenName;
 };
 
+const toCamelCase = (value: string) => {
+  return value.charAt(0).toLowerCase() + value.slice(1);
+};
+
+const toPascalCase = (value: string) => {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+};
+
+const applyRouteCase = (routeName: string, routeCase?: "camel" | "pascal") => {
+  if (routeCase === "camel") {
+    return toCamelCase(routeName);
+  }
+
+  return toPascalCase(routeName);
+};
+
 export const generateRoutes = (
   screens: ScreenInfo[],
   config: RoutesmithConfig,
 ) => {
   const routes = screens
     .map((screen) => {
-      const routeName = getRouteName(screen.name, config.naming?.removeSuffix);
+      const baseRouteName = getRouteName(
+        screen.name,
+        config.naming?.removeSuffix,
+      );
+
+      const routeName = applyRouteCase(baseRouteName, config.naming?.routeCase);
 
       return `  ${routeName}: '${screen.name}',`;
     })
