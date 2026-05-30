@@ -1,6 +1,8 @@
+
 export const Routes = {
-  AboutScreen: 'AboutScreen',
-  HomeScreen: 'HomeScreen',
-  ProfileScreen: 'ProfileScreen',
-  SettingsScreen: 'SettingsScreen',
+  About: 'AboutScreen',
+  Home: 'HomeScreen',
+  Login: 'Login',
+  Profile: 'ProfileScreen',
+  Settings: 'SettingsScreen',
 } as const;
