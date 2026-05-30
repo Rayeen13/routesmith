@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { pathToFileURL } from "url";
+import { require as tsxRequire } from "tsx/cjs/api";
 
 import { RoutesmithConfig } from "../types";
 
@@ -13,7 +13,7 @@ export const loadConfig = async (): Promise<RoutesmithConfig> => {
 
   console.log(`Loading config from: ${configPath}`);
 
-  const config = await import(pathToFileURL(configPath).href);
+  const config = tsxRequire(configPath, __filename);
 
   return config.default;
 };
